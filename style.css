@@ -1,0 +1,475 @@
+/* Общие стили */
+* {
+   font-family: Comic Sans MS, Comic Sans, cursive;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* Стили для header */
+header {
+   width: 100%;
+   background: rgb(75, 15, 15);
+   height: 100px; 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   left: 0;
+   z-index: 1000;
+   padding: 0 20px;  
+   overflow: hidden;  
+}
+
+/* Градиентный фон для header */
+header::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: linear-gradient(to bottom, transparent, rgb(226, 61, 61));
+   pointer-events: none;
+   z-index: -1; 
+}
+
+
+header .container {
+   width: 100%;
+   max-width: 1200px;
+   display: flex;
+   justify-content: space-between; 
+   align-items: center;
+   position: relative; 
+   z-index: 1;  
+   padding: 0;
+}
+
+/* Стили для логотипа */
+.logo {
+   display: flex;
+   align-items: center;
+   color: white;
+   font-size: 1.5em;
+   font-weight: bold;
+   margin-right: auto;  
+}
+
+.logo img {
+   width: 100px;  
+   height: 100px;  
+   margin: 0;      
+}
+
+/* Меню */
+.nav-menu {
+   display: flex;
+   align-items: center;
+   margin-left: auto;  }
+
+.nav-menu ul {
+   display: flex;
+   list-style: none;
+   margin: 0;
+   padding: 0;
+}
+
+.nav-menu ul li {
+   margin: 0 15px;
+}
+
+.nav-menu ul li a {
+   text-decoration: none;
+   color: white;
+   font-size: 1.2em;
+   transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+   color: rgb(226, 61, 61);
+}
+
+
+.burger-menu {
+   display: none;  
+}
+
+
+body {
+   margin-top: 100px;  
+}
+
+
+/* Секция "Интро" */
+.intro {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 30px;
+   flex-wrap: wrap;
+   gap: 20px;
+   background: url('yzor.png') no-repeat center center/cover;
+   color: #333;
+   position: relative;
+   z-index: 1;
+   min-height: 500px;
+}
+
+.intro::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(255, 255, 255, 0.5);
+   z-index: -1;
+}
+
+.i-container {
+   max-width: 1000px;
+}
+
+.i-container h1 {
+   font-size: 2.5em;
+   color: rgb(75, 15, 15);
+   margin-bottom: 20px;
+}
+
+.i-container p {
+   font-size: 1.2em;
+   margin-bottom: 20px;
+}
+
+.butt {
+   padding: 10px 20px;
+   background-color: rgb(75, 15, 15);
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 1.2em;
+   transition: background-color 0.3s ease;
+}
+
+.butt:hover {
+   background-color: rgb(226, 61, 61);
+}
+
+.img1 {
+   flex: 1;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.img1 img {
+   max-width: 90%;
+   height: 550px;
+   border-radius: 10px;
+   transition: transform 0.3s ease;
+}
+
+.img1:hover img {
+   transform: scale(1.1);
+}
+
+/* Секция "Обо мне" */
+.about {
+   padding: 70px;
+   background: #f9f9f9;
+   text-align: center;
+   min-height: 800px;
+}
+
+.about h2 {
+   font-size: 2.8em;
+   margin-bottom: 20px;
+   color: rgb(75, 15, 15);
+}
+
+.about-grid {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   gap: 20px;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.about-item {
+   background: white;
+   padding: 15px;
+   border-radius: 10px;
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-item:hover {
+   transform: translateY(-10px);
+   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about-item ul {
+   list-style-type: none; 
+   padding-left: 0; 
+   margin: 0;
+}
+
+/* Таймлайн */
+.timeline {
+   margin-top: 30px;
+   text-align: left;
+   max-width: 800px;
+   margin: 30px auto;
+   position: relative;
+   padding-left: 20px;
+   border-left: 2px solid rgb(75, 15, 15);
+}
+
+.timeline-item {
+   margin-bottom: 20px;
+   position: relative;
+}
+
+.timeline-date {
+   font-size: 1.2em;
+   font-weight: bold;
+   color: rgb(75, 15, 15);
+   margin-bottom: 10px;
+}
+
+.timeline-content {
+   background-color: #fff;
+   padding: 10px 15px;
+   border-radius: 10px;
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Секция "Мои занятия" */
+.activities {
+   padding: 70px;
+   background-color: #f4f4f4;
+   text-align: center;
+   min-height: 800px;
+}
+
+.activities h2 {
+   font-size: 2.8em;
+   margin-bottom: 20px;
+   color: rgb(75, 15, 15);
+}
+
+.list {
+   display: flex;
+   justify-content: space-between;
+   gap: 20px;
+   flex-wrap: wrap;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+.card {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   background-color: white;
+   padding: 15px;
+   width: 32%; /* Три карточки в строку */
+   border-radius: 10px;
+   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease;
+   height: auto;
+   min-height: 400px; /* Устанавливает минимальную высоту для всех карточек */
+   box-sizing: border-box;
+}
+
+.card:hover {
+   transform: translateY(-10px);
+   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.cf {
+   width: 100%;
+   height: auto;
+   aspect-ratio: 4 / 3; /* Пропорции изображения */
+   border-radius: 10px;
+   object-fit: cover;
+   transition: transform 0.3s ease;
+}
+
+.cf:hover {
+   transform: scale(1.05);
+}
+
+.cp {
+   flex: 1;
+   margin: 10px 0;
+   font-size: 1.4em;
+   text-align: center;
+}
+
+.cp em {
+   font-size: 1.4em;
+   color: rgb(75, 15, 15);
+}
+
+.butt {
+   margin-top: auto; /* Кнопка всегда у нижней границы */
+   padding: 10px 20px;
+   background-color: rgb(75, 15, 15);
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 1.2em;
+   transition: background-color 0.3s ease;
+}
+
+.butt:hover {
+   background-color: rgb(226, 61, 61);
+}
+
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+   body {
+       padding: 10px;
+   }
+
+   .intro {
+       flex-direction: column;
+       text-align: center;
+       padding: 20px;
+   }
+
+   .intro h1 {
+       font-size: 2em;
+   }
+
+   .intro p {
+       font-size: 1em;
+   }
+
+   .img1 img {
+       height: auto;
+       max-width: 100%;
+   }
+
+   .about-grid {
+       grid-template-columns: 1fr;
+   }
+
+   .list {
+       flex-direction: column;
+       gap: 15px;
+   }
+
+   .card {
+       width: 100%;
+   }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+   .intro {
+       padding: 30px;
+   }
+
+   .about {
+       min-height: auto;
+   }
+
+   .activities {
+       min-height: auto;
+   }
+
+   .about-grid {
+       grid-template-columns: repeat(2, 1fr);
+       justify-content: center;
+   }
+
+   .about-item:nth-child(3) {
+       grid-column: 1 / -1; 
+       justify-self: center; 
+       width: 50%; 
+   }
+
+   .list {
+       justify-content: center;
+   }
+
+   .card {
+       width: 48%;
+   }
+}
+
+/* Бургер-меню */
+.burger-menu {
+   display: none;
+   flex-direction: column;
+   justify-content: space-between;
+   width: 30px;
+   height: 24px;
+   cursor: pointer;
+}
+
+.burger-menu span {
+   display: block;
+   height: 4px;
+   background: white;
+   border-radius: 4px;
+   transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.burger-menu.active span:nth-child(1) {
+   transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-menu.active span:nth-child(2) {
+   opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+   transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Мобильное меню */
+@media (max-width: 768px) {
+   .burger-menu {
+       display: flex;
+   }
+
+   .nav-menu {
+       display: none;
+       position: fixed;
+       top: 80px;
+       right: 0;
+       width: 250px;
+       background: rgb(75, 15, 15);
+       flex-direction: column;
+       align-items: center;
+       padding: 20px;
+       box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+       border-radius: 0 0 10px 10px;
+   }
+
+   .nav-menu.active {
+       display: flex;
+   }
+
+   .nav-menu ul {
+       flex-direction: column;
+   }
+
+   .nav-menu ul li {
+       margin: 10px 0;
+   }
+
+   .nav-menu ul li a {
+       font-size: 1.4em;
+   }
+}
